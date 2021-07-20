@@ -22,7 +22,7 @@ namespace JpgRarToCBR.Services
         private static string Convert(string sourceFilePath, string sourceFileExtension, string targetPath, string targetExtension)
         {
             Console.WriteLine($"Try to copy {sourceFilePath} file to {targetPath} folder");
-            ThrowIfHasnotExtension(sourceFilePath.ToString(), sourceFileExtension);
+            ThrowIfHasNotExtension(sourceFilePath.ToString(), sourceFileExtension);
             CreateFolderIfNotExist(targetPath);
 
             var sourceFileName = Path.GetFileName(sourceFilePath);
@@ -39,7 +39,7 @@ namespace JpgRarToCBR.Services
 
         }
 
-        private static void ThrowIfHasnotExtension(string filename, string extension)
+        private static void ThrowIfHasNotExtension(string filename, string extension)
         {
             if (!filename.Contains(extension))
             {
